@@ -1,0 +1,366 @@
+{
+  "colors": {
+    "primaryLight": "00CE93",
+    "primary": "006A4A",
+    "primaryDark": "005F44",
+    "primaryLight20": "CCF5E9",
+    "primary12": "1FA67F",
+    "primary60": "99D6C5",
+    "primary80": "CCEAE2",
+    "primaryDark50": "80B4A4",
+    "white": "FFFFFF",
+    "background": "006A4A",
+    "gray12": "E1E1E1",
+    "gray22": "C7C7C7",
+    "gray40": "999999",
+    "gray50": "797979",
+    "gray85": "262626",
+    "black": "000000",
+    "warning": "FFCB00",
+    "accent": "FFA100",
+    "danger": "D51C1C",
+    "startProgress": "79E775",
+    "averageProgress": "FFCC75",
+    "finalProgress": "FFA7A7"
+  },
+  "fonts": {
+    "iOS": "SFProDisplay",
+    "macOS": "SFProDisplay",
+    "base": "Roboto"
+  },
+  "components": {
+    "slideableActionPositive": {
+      "colors": {
+        "backgroundColor": "accent"
+      }
+    },
+    "slideableActionNegative": {
+      "colors": {
+        "backgroundColor": "danger"
+      }
+    },
+    "privilegeBottomSheet": {
+      "dimensions": {
+        "headerBottomPadding": 5
+      },
+      "colors": {
+        "backgroundColor": "white",
+        "headerColor": "black"
+      }
+    },
+    "topEventInfo": {
+      "textStyles": {
+        "teamNameStyle": "teamNamesInversed"
+      }
+    },
+    "topOutcomeInfo": {
+      "textStyles": {
+        "titleTextStyle": "main10Inversed",
+        "valueTextStyle": "main13Inversed",
+        "selectedTitleTextStyle": "main10",
+        "selectedValueTextStyle": "main13"
+      },
+      "colors": {
+        "titleColor": "gray12",
+        "valueColor": "gray12",
+        "selectedTitleColor": "gray85",
+        "selectedValueColor": "gray50"
+      },
+      "dimensions": {
+        "valueColorTransparency":  0.1,
+        "titleColorTransparency":  0.33,
+        "selectedTitleColorTransparency":  1.0,
+        "selectedValueColorTransparency":  1.0
+      }
+    },
+    "cartScoreTable_current": {
+      "colors": {
+        "gameScoreColor": "black",
+        "serveColor": "primary"
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Primary",
+        "mainTextStyle": "marketFilterPrimary",
+        "mainTextStyleBold": "mainBold13Primary"
+      }
+    },
+    "cartScoreTable_total": {
+      "textStyles": {
+        "titleTextStyle": "mainSemibold10Accent",
+        "mainTextStyle": "mainBold13"
+      }
+    },
+    "videoScoreTable_all": {
+      "colors": {
+        "boxColor": "transparent"
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Inversed",
+        "mainTextStyle": "marketFilterInversed",
+        "mainTextStyleBold": "mainBold13Inversed"
+      }
+    },
+    "videoScoreTable_current": {
+      "colors": {
+        "gameScoreColor": "white",
+        "serveColor": "white",
+        "boxColor": "gray22"
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Inversed",
+        "mainTextStyle": "marketFilterInversed",
+        "mainTextStyleBold": "mainBold13Inversed"
+      }
+    },
+    "videoScoreTable_total": {
+      "colors": {
+        "boxColor": "transparent"
+      },
+      "textStyles": {
+        "titleTextStyle": "mainSemibold10Inversed",
+        "mainTextStyle": "eventScoreInversed",
+        "mainTextStyleBold": "eventScoreInversed"
+      }
+    },
+    "videoScoreTable_red": {
+      "colors": {
+        "boxColor": "transparent"
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Inversed",
+        "mainTextStyle": "main13Inversed",
+        "mainTextStyleBold": "mainBold13Inversed"
+      }
+    },
+    "topScoreTable_all": {
+      "colors": {
+        "boxColor": "transparent"
+      },
+      "dimensions": {
+        "scorePadding": 0.0
+      }
+    },
+    "topScoreTable_current": {
+      "colors": {
+        "gameScoreColor": "white",
+        "serveColor": "white",
+        "boxColor": "gray22"
+      },
+      "dimensions": {
+        "scorePadding": 4.0
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Primary",
+        "mainTextStyle": "marketFilterInversed",
+        "mainTextStyleBold": "mainBold13Inversed"
+      }
+    },
+    "topScoreTable_total": {
+      "colors": {
+        "boxColor": "transparent"
+      },
+      "dimensions": {
+        "scorePadding": 4.0
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Accent",
+        "mainTextStyle": "marketFilterInversed",
+        "mainTextStyleBold": "mainBold13Inversed"
+      }
+    },
+    "topScoreTable_red": {
+      "dimensions": {
+        "scorePadding": 0.0
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Secondary",
+        "mainTextStyle": "main13Secondary",
+        "mainTextStyleBold": "mainBold13Secondary"
+      }
+    },
+    "eventDetailsTable_all": {
+      "dimensions": {
+        "scorePadding": 6.0,
+        "titlePadding": 4.0
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Secondary"
+      }
+    },
+    "eventDetailsTable_current": {
+      "dimensions": {
+        "scorePadding": 6.0,
+        "titlePadding": 4.0
+      },
+      "colors": {
+        "serveColor": "primary"
+      },
+      "textStyles": {
+        "titleTextStyle": "main10Primary",
+        "mainTextStyle": "marketFilterPrimary",
+        "mainTextStyleBold": "mainBold13Primary"
+      }
+    },
+    "eventDetailsTable_total": {
+      "dimensions": {
+        "scorePadding": 6.0,
+        "titlePadding": 4.0
+      },
+      "textStyles": {
+        "titleTextStyle": "mainSemibold10Accent",
+        "mainTextStyle": "marketFilterAccent",
+        "mainTextStyleBold": "mainBold13Accent"
+      }
+    },
+    "eventDetailsTable_red": {
+      "dimensions": {
+        "scorePadding": 6.0,
+        "titlePadding": 4.0
+      },
+      "textStyles": {
+        "mainTextStyle": "main13Danger",
+        "mainTextStyleBold": "mainBold13Danger"
+      }
+    },
+    "lineCounter": {
+      "conditions": {
+        "borderSymmetric": true
+      }
+    },
+    "noneButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "authorizeButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "confirmEmailButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "confirmPhoneButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "confirmPersonInClubButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "selectIdentificationButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "routeToLineButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "primary",
+        "borderColor": "primary"
+      }
+    },
+    "rechargeButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "minQuantityButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "gray22"
+      },
+      "conditions": {
+        "disabled": true
+      }
+    },
+    "maxQuantityButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "gray22"
+      },
+      "conditions": {
+        "disabled": true
+      }
+    },
+    "singleMakeBetButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "primary"
+      }
+    },
+    "systemMakeBetButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "primary"
+      }
+    },
+    "expressMakeBetButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "primary"
+      }
+    },
+    "removeBlockedOutcomesButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "accent",
+        "borderColor": "accent"
+      }
+    },
+    "selectOutcomeButton": {
+      "textStyles": {
+        "buttonTextStyle": "main17Inversed"
+      },
+      "colors": {
+        "backgroundColor": "gray22"
+      }
+    }
+  }
+}

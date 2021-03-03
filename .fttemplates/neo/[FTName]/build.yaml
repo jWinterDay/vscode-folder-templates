@@ -1,0 +1,9 @@
+targets:
+  $default:
+    sources:
+      include:
+        - $package$
+        - lib/$lib$
+        - lib/src/**
+        - flutter_driver/$lib$
+        - flutter_driver/**

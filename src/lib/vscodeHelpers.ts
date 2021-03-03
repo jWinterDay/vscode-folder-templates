@@ -54,8 +54,7 @@ export const getTargetPath = async (
     // if command is triggered via command box and not via context menu let user enter path where component should be created
     const workspaceUri = await getWorkspaceUri();
     const filePath = await vscode.window.showInputBox({
-      placeHolder:
-        "Enter the relative to project root path where your folder should be created",
+      placeHolder: "Enter the relative to project root path where your folder should be created",
     });
     return vscode.Uri.parse(workspaceUri + "/" + filePath, true);
   }

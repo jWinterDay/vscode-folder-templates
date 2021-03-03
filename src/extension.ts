@@ -11,8 +11,6 @@ export function activate(context: vscode.ExtensionContext) {
   // The commandId parameter must match the command field in package.json
   const globalTemplateFolderPath = context.asAbsolutePath(".fttemplates");
 
-  console.log('==========globalTemplateFolderPath = ' + globalTemplateFolderPath);
-
   let createStructure = vscode.commands.registerCommand(
     "FT.createFolderStructure",
     (resource) => {

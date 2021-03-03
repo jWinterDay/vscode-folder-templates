@@ -1,0 +1,21 @@
+tests:
+# Note: flutter driver expects a pair of files eg, main1.dart and main1_test.dart
+  - test_driver/app.dart
+
+# Interim location of screenshots from tests
+staging: test_driver/images/actual
+
+# A list of locales supported by the app
+locales:
+  - en-US
+
+devices:
+  ios:
+    iPad 4 A1459 10.2:
+      frame: false
+  android:
+    Samsung:
+      frame: false
+
+# Frame screenshots
+frame: false
