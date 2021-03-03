@@ -28,19 +28,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:FT.createFolderStructure",
-    "onCommand:FT.openGlobalFolder"
+    "onCommand:FT.createFolderStructure"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "FT.createFolderStructure",
-        "title": "Create New Templated Folder"
-      },
-      {
-        "command": "FT.openGlobalFolder",
-        "title": "Open Global Folder Templates Directory"
+        "title": "Create Neo Package"
       }
     ],
     "menus": {

@@ -37,6 +37,7 @@ const convertFolderContentToStructure = (
 
 export const getTemplatesFromFS = (folderPath: PathLike) => {
   const fsTemplates = readdirSync(folderPath, { withFileTypes: true });
+
   return fsTemplates
     .map((file) => {
       if (!file.isDirectory()) {

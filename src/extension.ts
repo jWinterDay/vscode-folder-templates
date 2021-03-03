@@ -11,9 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
   // The commandId parameter must match the command field in package.json
   const globalTemplateFolderPath = context.asAbsolutePath(".fttemplates");
 
-  if (!isDirectory(globalTemplateFolderPath)) {
-    createDirectory(globalTemplateFolderPath);
-  }
+  console.log('==========globalTemplateFolderPath = ' + globalTemplateFolderPath);
 
   let createStructure = vscode.commands.registerCommand(
     "FT.createFolderStructure",
@@ -21,18 +19,18 @@ export function activate(context: vscode.ExtensionContext) {
       return createFolderStructure(resource, globalTemplateFolderPath);
     }
   );
-  let openFolderTemplatesGlobalFolder = vscode.commands.registerCommand(
-    "FT.openGlobalFolder",
-    () => {
-      try {
-        open(globalTemplateFolderPath);
-      } catch (e) {}
-    }
-  );
+  // let openFolderTemplatesGlobalFolder = vscode.commands.registerCommand(
+  //   "FT.openGlobalFolder",
+  //   () => {
+  //     try {
+  //       open(globalTemplateFolderPath);
+  //     } catch (e) { }
+  //   }
+  // );
 
   context.subscriptions.push(createStructure);
-  context.subscriptions.push(openFolderTemplatesGlobalFolder);
+  // context.subscriptions.push(openFolderTemplatesGlobalFolder);
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

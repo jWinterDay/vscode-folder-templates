@@ -11,6 +11,7 @@ import {
 import { showError, showInfo } from "../lib/vscodeHelpers";
 import { getTemplatesFromFS, pickTemplate } from "../lib/extensionHelpers";
 import { isDirectory } from "../lib/fsHelpers";
+import { privateEncrypt } from "crypto";
 
 const CreateFolderStructure = async (
   resource: vscode.Uri | string | undefined,
