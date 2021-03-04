@@ -10,7 +10,7 @@ import 'package:<FTName>/src/domain/epics/<FTName>_epic.dart';
 import 'package:<FTName>/src/services/<FTName>_service.dart';
 import 'package:<FTName>/src/domain/action/<FTName>_actions.dart';
 import 'package:<FTName>/src/domain/state/<FTName>_state.dart';
-import 'package:<FTName>/src/utils/exceptions.dart';
+// import 'package:<FTName>/src/utils/exceptions.dart';
 
 class <FTName | pascalcase>EpicImpl extends <FTName | pascalcase>Epic {
   <FTName | pascalcase>EpicImpl(
@@ -33,13 +33,13 @@ class <FTName | pascalcase>EpicImpl extends <FTName | pascalcase>Epic {
         .doOnData((Action<dynamic> action) {
           // example: api.actions.setAwaitingPinCodeResponse(true);
         })
-        .asyncMap((Action<dynamic> action) async {
+        // .asyncMap((Action<dynamic> action) async {
           // assert(action.payload != null);
 
           // final dynamic verificationCode = action.payload;
 
-          return await <FTName | camelcase>Service.test();
-        })
+        //   return await <FTName | camelcase>Service.test();
+        // })
         // .doOnData((RegistrationTokenResponse result) {
           // api.actions
           //   ..setTokenResponse(result)

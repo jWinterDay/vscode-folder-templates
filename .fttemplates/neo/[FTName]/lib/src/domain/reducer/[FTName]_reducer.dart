@@ -2,13 +2,8 @@
 
 // ignore_for_file: import_of_legacy_library_into_null_safe
 import 'package:built_redux/built_redux.dart';
-// import 'package:neo_error_converter/network/entity/network_error_model.dart';
-// import 'package:neo_network/entity/registration/registration_response.dart';
-// import 'package:neo_network/entity/registration/registration_token_response.dart';
-// import 'package:neo_network/entity/registration/verification_response.dart';
-// import 'package:neo_registration/src/domain/action/registration_actions.dart';
-// import 'package:neo_registration/src/domain/state/registration_state.dart';
-// import 'package:utilities/utilities.dart' show Pair;
+// import 'package:<FTName>/src/domain/action/<FTName>_actions.dart';
+import 'package:<FTName>/src/domain/state/<FTName>_state.dart';
 
 ReducerBuilder<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder> create<FTName | pascalcase>Reducer() {
   return ReducerBuilder<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder>();
