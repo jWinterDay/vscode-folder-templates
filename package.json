@@ -1,25 +1,20 @@
 {
   "name": "vscode-fast-folder-structure",
-  "displayName": "Folder Templates",
-  "description": "Create Templates for Folders and Files for easy reusability",
+  "displayName": "Flutter Redux Packages",
+  "description": "Create New Redux Package for easy reusability",
   "repository": {
     "type": "git",
     "url": "https://github.com/Huuums/vscode-folder-templates"
   },
   "keywords": [
-    "Folder Creator",
-    "File templates",
-    "Folder Templates",
-    "template",
-    "Create Directories",
-    "Productivity",
-    "scaffold",
-    "react",
-    "angular",
-    "vue"
+    "Flutter Redux",
+    "Flutter Packages",
+    "Flutter Redux Packages",
+    "Flutter Redux Folders",
+    "Create Flutter Redux Directories"
   ],
-  "version": "3.2.0",
-  "publisher": "Huuums",
+  "version": "4.2.0",
+  "publisher": "jWinterDay",
   "engines": {
     "vscode": "^1.37.0"
   },
@@ -35,7 +30,7 @@
     "commands": [
       {
         "command": "FT.createFolderStructure",
-        "title": "Create Neo Package"
+        "title": "Create New Flutter Redux Package"
       }
     ],
     "menus": {
@@ -48,7 +43,7 @@
       ]
     },
     "configuration": {
-      "title": "Folder Templates",
+      "title": "Flutter Redux Packages",
       "properties": {
         "folderTemplates.structures": {
           "type": "array",
