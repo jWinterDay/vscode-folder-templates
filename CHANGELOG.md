@@ -1,5 +1,10 @@
 # Change Log
 
+
+### 4.2.1
+
+  - This is new fork to create Flutter Redux Templates and BLoCs with Widgets
+
 ### 3.2.0
 
 - Thanks for all of these [mrelemerson](https://github.com/mrelemerson)

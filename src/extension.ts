@@ -6,28 +6,27 @@ import { createDirectory, isDirectory } from "./lib/fsHelpers";
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with registerCommand
-  // The commandId parameter must match the command field in package.json
-  const globalTemplateFolderPath = context.asAbsolutePath(".fttemplates");
+  const globalTemplateReduxFolderPath = context.asAbsolutePath(".fttemplates_redux");
+  const globalTemplateBlocWithWidgetFolderPath = context.asAbsolutePath(".fttemplates_bloc_with_widget");
 
-  let createStructure = vscode.commands.registerCommand(
-    "FT.createFolderStructure",
+  // redux template
+  const createReduxStructure = vscode.commands.registerCommand(
+    "FT.createReduxStructure",
     (resource) => {
-      return createFolderStructure(resource, globalTemplateFolderPath);
+      return createFolderStructure(resource, globalTemplateReduxFolderPath);
     }
   );
-  // let openFolderTemplatesGlobalFolder = vscode.commands.registerCommand(
-  //   "FT.openGlobalFolder",
-  //   () => {
-  //     try {
-  //       open(globalTemplateFolderPath);
-  //     } catch (e) { }
-  //   }
-  // );
 
-  context.subscriptions.push(createStructure);
-  // context.subscriptions.push(openFolderTemplatesGlobalFolder);
+  // bloc with widget template
+  const createBlocWithWidgetStructure = vscode.commands.registerCommand(
+    "FT.createBlocWithWidgetStructure",
+    (resource) => {
+      return createFolderStructure(resource, globalTemplateBlocWithWidgetFolderPath);
+    }
+  );
+
+  context.subscriptions.push(createReduxStructure);
+  context.subscriptions.push(createBlocWithWidgetStructure);
 }
 
 // this method is called when your extension is deactivated

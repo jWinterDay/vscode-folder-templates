@@ -4,22 +4,25 @@ import createStructure from "../actions/createStructure";
 import { FolderTemplate, StringReplaceTuple } from "../types";
 import getReplaceValueTuples from "../lib/getReplaceValueTuples";
 import {
-  getLocalTemplatePath,
+  // getLocalTemplatePath, 
   getTargetPath,
   readConfig,
 } from "../lib/vscodeHelpers";
 import { showError, showInfo } from "../lib/vscodeHelpers";
 import { getTemplatesFromFS, pickTemplate } from "../lib/extensionHelpers";
 import { isDirectory } from "../lib/fsHelpers";
-import { privateEncrypt } from "crypto";
+// import { privateEncrypt } from "crypto";
 
 const CreateFolderStructure = async (
   resource: vscode.Uri | string | undefined,
-  globalTemplatePath: string
+  globalTemplatePath: string,
 ) => {
   const targetUri = await getTargetPath(resource);
 
-  const templateFolderPath = [getLocalTemplatePath(), globalTemplatePath];
+  const templateFolderPath = [
+    // getLocalTemplatePath(),
+    globalTemplatePath,
+  ];
   const validPaths = templateFolderPath.filter(isDirectory) as string[];
 
   const configTemplates: FolderTemplate[] = readConfig("structures") || [];
