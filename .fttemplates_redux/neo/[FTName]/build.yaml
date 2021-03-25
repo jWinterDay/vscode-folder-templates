@@ -5,5 +5,5 @@ targets:
         - $package$
         - lib/$lib$
         - lib/src/**
-        - flutter_driver/$lib$
-        - flutter_driver/**
+        - test_driver/$lib$
+        - test_driver/**

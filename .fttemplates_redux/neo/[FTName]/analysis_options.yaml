@@ -25,9 +25,7 @@ analyzer:
     - macos/**
     - pubspec.lock
     - pubspec.yaml
-
     - lib/src/generated/**
-    # - test_driver/lib/**
     
 
 linter:

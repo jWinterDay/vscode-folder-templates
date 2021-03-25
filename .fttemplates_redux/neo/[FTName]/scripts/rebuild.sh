@@ -2,12 +2,12 @@
 
 flutter packages pub run build_runner build --delete-conflicting-outputs
 
-# cd flutter_driver
+cd test_driver
 
-# pwd
-# flutter packages pub run build_runner build --delete-conflicting-outputs
-# cd ..
-
+flutter packages pub run build_runner build --delete-conflicting-outputs
+cd ..
 
 flutter format -l 120 lib
+flutter format -l 120 test_driver
+
 killall dart

@@ -1,10 +1,10 @@
 {
-  "name": "vscode-fast-folder-structure",
+  "name": "vscode-flutter-redux-packages",
   "displayName": "Flutter Redux Packages",
   "description": "Create New Redux Package for easy reusability",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Huuums/vscode-folder-templates"
+    "url": "https://github.com/jWinterDay/vscode-folder-templates"
   },
   "keywords": [
     "Flutter Redux",
@@ -13,7 +13,7 @@
     "Flutter Redux Folders",
     "Create Flutter Redux Directories"
   ],
-  "version": "4.4.0",
+  "version": "4.5.0",
   "publisher": "EvgeniyNikiforov",
   "engines": {
     "vscode": "^1.37.0"
