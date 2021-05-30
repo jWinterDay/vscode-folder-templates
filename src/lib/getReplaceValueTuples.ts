@@ -23,9 +23,9 @@ export default (variableNames: string[]) => {
         value,
         validateInput: text => {
           //^[a-z0-9_)]{5,40}$
-          const ok: boolean = RegExp('^(([a-z0-9(_))]{5,40})+[a-z0-9]{1})$').test(text);
+          const ok: boolean = RegExp('^(([a-z0-9(_))]{2,40})+[a-z0-9]?)$').test(text);
 
-          return ok ? null : 'only camelcase with length [5-40]';
+          return ok ? null : 'only camelcase with length [2-40]';
         }
       });
       //always return a string

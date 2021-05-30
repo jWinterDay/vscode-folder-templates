@@ -13,7 +13,7 @@
     "Flutter Redux Folders",
     "Create Flutter Redux Directories"
   ],
-  "version": "4.5.0",
+  "version": "4.6.0",
   "publisher": "EvgeniyNikiforov",
   "engines": {
     "vscode": "^1.37.0"
@@ -35,7 +35,7 @@
       },
       {
         "command": "FT.createBlocWithWidgetStructure",
-        "title": "Create Bloc with Widget"
+        "title": "Create Widget structure"
       }
     ],
     "menus": {

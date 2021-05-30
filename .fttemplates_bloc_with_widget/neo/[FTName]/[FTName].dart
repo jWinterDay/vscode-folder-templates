@@ -1,51 +1,35 @@
-
+// @dart=2.12
 
 // ignore_for_file: import_of_legacy_library_into_null_safe
+// ignore_for_file: always_use_package_imports
 import 'package:app_domain/domain/store_provider.dart';
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '<FTName>_bloc.dart';
-import 'package:provider/provider.dart';
-import 'package:dioc/dioc.dart' as dioc;
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class <FTName | pascalcase> extends StatefulWidget {
-  const <FTName | pascalcase>();
+import 'bloc/<FTName>_bloc.dart';
+import 'events/<FTName>_event.dart';
+import 'views/<FTName>_view.dart';
 
-  @override
-  _<FTName | pascalcase>State createState() => _<FTName | pascalcase>State();
-}
+class <FTName | pascalcase> extends StatelessWidget {
+  const <FTName | pascalcase>({
+    Key? key,
+    this.testMode = false,
+  }) : super(key: key);
 
-class _<FTName | pascalcase>State extends State<<FTName | pascalcase>> {
-  late <FTName | pascalcase>Bloc _bloc;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _bloc = <FTName | pascalcase>Bloc();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    // final StoreProvider storeProvider = context.read<dioc.Container>().singleton<StoreProvider>();
-    final dioc.Container di = context.read<dioc.Container>();
-
-    _bloc
-      ..setDi(di)
-      ..restoreFields();
-  }
-
-  @override
-  void dispose() {
-    _bloc.dispose();
-
-    super.dispose();
-  }
+  final bool testMode;
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final StoreProvider storeProvider = context.read<StoreProvider>();
+
+    return BlocProvider<<FTName | pascalcase>Bloc>(
+      create: (_) => <FTName | pascalcase>Bloc(
+        storeProvider: storeProvider,
+        testMode: testMode,
+      )..add(const <FTName | pascalcase>Event.start()),
+      child: <FTName | pascalcase>View(
+        testMode: testMode,
+      ),
+    );
   }
 }

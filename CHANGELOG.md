@@ -1,5 +1,8 @@
 # Change Log
 
+### 4.6.0
+
+  - Changed templates for using via flutter_bloc
 
 ### 4.2.1
 
