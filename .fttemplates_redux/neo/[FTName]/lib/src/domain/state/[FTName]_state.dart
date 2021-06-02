@@ -6,7 +6,7 @@ part '<FTName>_state.g.dart';
 abstract class <FTName | pascalcase>State implements Built<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder> {
   <FTName | pascalcase>State._();
 
-  factory <FTName | pascalcase>State([Function(<FTName | pascalcase>StateBuilder builder) updates]) {
+  factory <FTName | pascalcase>State([Function(<FTName | pascalcase>StateBuilder builder)? updates]) {
     return _$<FTName | pascalcase>State((<FTName | pascalcase>StateBuilder builder) {
       _initializeBuilder(builder);
 

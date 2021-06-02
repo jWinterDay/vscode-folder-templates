@@ -6,14 +6,14 @@ import 'package:models/config/config.dart';
 import 'package:<FTName>/src/domain/action/<FTName>_actions.dart';
 import 'package:<FTName>/src/domain/state/<FTName>_state.dart';
 import 'package:<FTName>/src/services/<FTName>_service.dart';
-import 'package:states/states.dart';
+// import 'package:states/states.dart';
 
 import 'mock_redux_instances.dart';
 import '<FTName>_service_mock_impl.dart';
 import 'store_provider_impl.dart';
 
 Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTName | pascalcase>Actions>> initApplication(
-  dioc.Container di,
+  GetIt di,
 ) async {
   final AppConfig appConfig = AppConfig((AppConfigBuilder b) {
     return b
@@ -40,7 +40,7 @@ Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTN
   return await initStore(di);
 }
 
-void _initServices(dioc.Container di) {
+void _initServices(GetIt di) {
   di.registerSingleton<<FTName | pascalcase>Service>(<FTName | pascalcase>ServiceMockImpl(null));
 }
 

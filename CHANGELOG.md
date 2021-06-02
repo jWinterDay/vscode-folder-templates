@@ -1,5 +1,9 @@
 # Change Log
 
+### 5.0.0
+
+  - migration to nullsafety
+
 ### 4.6.0
 
   - Changed templates for using via flutter_bloc
