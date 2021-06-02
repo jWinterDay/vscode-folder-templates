@@ -1,8 +1,4 @@
-
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
 import 'package:built_redux/built_redux.dart';
-import 'package:dioc/dioc.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:utilities/utilities.dart';
 
@@ -17,7 +13,6 @@ class <FTName | pascalcase>EpicImpl extends <FTName | pascalcase>Epic {
     this.<FTName | camelcase>Service,
   );
 
-  @Inject()
   final <FTName | pascalcase>Service <FTName | camelcase>Service;
 
   @override

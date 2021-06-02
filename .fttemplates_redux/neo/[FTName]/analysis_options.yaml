@@ -4,6 +4,11 @@
 include: package:pedantic/analysis_options.yaml
 
 analyzer:
+  plugins:
+    # custom linters
+    # - cool_linter
+    # - dart_code_metrics
+
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
@@ -20,11 +25,13 @@ analyzer:
     - build/**
     - ios/**
     - lib/**.g.dart
+    - lib/**.freezed.dart
     - test_driver/**.g.dart
     - linux/**
     - macos/**
     - pubspec.lock
     - pubspec.yaml
+
     - lib/src/generated/**
     
 

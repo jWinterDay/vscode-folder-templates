@@ -1,12 +1,12 @@
 
-// ignore_for_file: import_of_legacy_library_into_null_safe
 import 'package:app_domain/domain/store_provider.dart';
 import 'package:built_redux/src/store.dart';
-import 'package:dioc/dioc.dart' as dioc;
+import 'package:get_it/get_it.dart';
 import 'package:models/config/config.dart';
 import 'package:<FTName>/src/domain/action/<FTName>_actions.dart';
 import 'package:<FTName>/src/domain/state/<FTName>_state.dart';
 import 'package:<FTName>/src/services/<FTName>_service.dart';
+import 'package:states/states.dart';
 
 import 'mock_redux_instances.dart';
 import '<FTName>_service_mock_impl.dart';
@@ -28,18 +28,10 @@ Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTN
       ..registrationSmsRequestPeriod = 10;
   });
 
-  di.register<AppConfig>(
-    (dioc.Container container) => appConfig,
-    defaultMode: dioc.InjectMode.singleton,
-  );
+  di.registerSingleton<AppConfig>(appConfig);
 
-  // StoreProvider
   final StoreProviderImpl storeProviderImpl = StoreProviderImpl();
-
-  di.register<StoreProvider>(
-    (dioc.Container container) => storeProviderImpl,
-    defaultMode: dioc.InjectMode.singleton,
-  );
+  di.registerSingleton<StoreProvider>(storeProviderImpl);
 
   // services
   _initServices(di);
@@ -49,13 +41,10 @@ Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTN
 }
 
 void _initServices(dioc.Container di) {
-  di.register<<FTName | pascalcase>Service>(
-    (dioc.Container container) => <FTName | pascalcase>ServiceMockImpl(null),
-    defaultMode: dioc.InjectMode.singleton,
-  );
+  di.registerSingleton<<FTName | pascalcase>Service>(<FTName | pascalcase>ServiceMockImpl(null));
 }
 
-Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTName | pascalcase>Actions>> initStore(dioc.Container di) async {
+Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTName | pascalcase>Actions>> initStore(GetIt di) async {
   final Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTName | pascalcase>Actions> store =
       Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTName | pascalcase>Actions>(
     mockReducerBuilder.build(),
@@ -65,7 +54,7 @@ Future<Store<<FTName | pascalcase>State, <FTName | pascalcase>StateBuilder, <FTN
   );
 
   // ignore: avoid_as
-  final StoreProviderImpl storeProvider = di.singleton<StoreProvider>() as StoreProviderImpl;
+  final StoreProviderImpl storeProvider = di<StoreProvider>() as StoreProviderImpl;
   storeProvider.setStore(store);
 
   return store;

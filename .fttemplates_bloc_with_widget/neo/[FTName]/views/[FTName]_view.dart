@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 // app domain
 // import 'package:app_domain/domain/store_provider.dart'; // uncomment it for using redux store provider
-// import 'package:utilities/context_extention.dart'; // uncomment it for using context tools
+import 'package:utilities/context_extention.dart'; // uncomment it for using context tools
 // import 'package:package_name/package_name.dart'; // uncomment it for using package specific
 
 import '../bloc/<FTName>_bloc.dart';
@@ -54,7 +54,7 @@ class _Example extends StatelessWidget {
           child: Text(
             'Example widget loading: $loading',
             style: const TextStyle(
-              color: Colors.red, // TODO replace with context.colors. Example: context.colors.white,
+              color: context.colors.white,
             ),
           ),
         ),

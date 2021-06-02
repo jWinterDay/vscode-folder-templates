@@ -1,5 +1,3 @@
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
 import 'package:design/design.dart';
 import 'package:design/design_data.dart';
 import 'package:design/theme/palette.dart';
@@ -18,14 +16,12 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await initApplication(diContainer);
-
   await Palette.init();
   final DesignData design = await DesignData().initAsync();
 
   runApp(
     Design(
       design: design,
-      isInversed: true,
       child: const MockApp(),
     ),
   );
@@ -68,8 +64,14 @@ class _MockAppState extends State<MockApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return Provider<dioc.Container>.value(
-      value: diContainer,
+    return
+    
+     MultiProvider(
+      providers: <SingleChildWidget>[
+        Provider<IconsSport>.value(value: IconsSportOriginImpl(diGet<StoreProvider>())),
+        Provider<StoreProvider>.value(value: diGet<StoreProvider>()),
+        Provider<GetIt>.value(value: diGet),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: _design.theme,
@@ -77,24 +79,25 @@ class _MockAppState extends State<MockApp> with WidgetsBindingObserver {
           Locale('ru'),
           // Locale('en'),
         ],
-        routes: <String, Widget Function(BuildContext)>{
-          '/': (_) => HomeScreen(),
-          // choose type
-          // registrationChooseTypeComponentKey: (_) => const RegistrationChooseType(),
-          // // step 1
-          // registrationNewClientStepOneKey: (_) => const RegistrationNewClientStepOne(),
-          // // step 2
-          // registrationNewClientStepTwoKey: (_) => const RegistrationNewClientStepTwo(),
-          // // step 3
-          // registrationNewClientStepThreeKey: (_) => const RegistrationNewClientStepThree(),
+        initialRoute: '/',
+        onGenerateRoute: (RouteSettings settings) {
+          switch (settings.name) {
+            case '/':
+              return MaterialPageRoute<dynamic>(
+                settings: settings,
+                builder: (_) => HomeScreen(),
+              );
+            default:
+              return null;
+          }
         },
         localizationsDelegates: <LocalizationsDelegate<dynamic>>[
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           const FallbackCupertinoLocalisationsDelegate(),
-          <FTName | pascalcase>Intl.delegate,
+          <FTName | pascalcase>Localizations.delegate,
         ],
-        builder: (_, Widget child) {
+        builder: (_, Widget? child) {
           return child ?? const SizedBox();
         },
       ),
@@ -117,18 +120,21 @@ class HomeScreen extends StatelessWidget {
                   child: Text('<FTName | pascalcase>'),
                 ),
               ),
-              const SizedBox(height: 32),
+
               // choose type component
-              // ListTile(
-              //   leading: const Icon(Icons.ac_unit),
-              //   title: InkWell(
-              //     key: const Key(registrationChooseTypeComponentKey),
-              //     child: const Text('choose type'),
-              //     onTap: () {
-              //       Navigator.of(context).pushNamed(registrationChooseTypeComponentKey);
-              //     },
-              //   ),
-              // ),
+              Padding(
+                padding: const EdgeInsets.only(top: 32),
+                child: ListTile(
+                  leading: const Icon(Icons.ac_unit),
+                  title: InkWell(
+                    key: const Key(registrationChooseTypeComponentKey),
+                    child: const Text('choose type'),
+                    onTap: () {
+                      Navigator.of(context).pushNamed(registrationChooseTypeComponentKey);
+                    },
+                  ),
+                ),
+              ),
             ],
           ),
         ),

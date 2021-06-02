@@ -1,7 +1,3 @@
-
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
-
 class <FTName | pascalcase>Validators {
   // example
   // static RegExp get birthDayRegExp => RegExp(r'^(\d){2}\.(\d){2}\.(\d){4}$');

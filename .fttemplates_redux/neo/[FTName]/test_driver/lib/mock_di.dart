@@ -1,5 +1,3 @@
-import 'package:dioc/dioc.dart' as dioc;
+import 'package:get_it/get_it.dart';
 
-import 'mock_bootstrap.dart';
-
-dioc.Container diContainer = MockBootstrapBuilder.instance.production();
+GetIt diGet = GetIt.instance;

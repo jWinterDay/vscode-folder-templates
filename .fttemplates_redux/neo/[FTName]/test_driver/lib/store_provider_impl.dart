@@ -1,15 +1,15 @@
 
-// ignore_for_file: import_of_legacy_library_into_null_safe
 import 'package:app_domain/domain/actions/actions.dart';
 import 'package:app_domain/domain/states/application.dart';
 import 'package:app_domain/domain/store_provider.dart';
 import 'package:built_redux/built_redux.dart';
 import 'package:built_value/built_value.dart';
+import 'package:states/states.dart';
 
 class StoreProviderImpl implements StoreProvider {
   // ignore_for_file: avoid_as
   // ignore_for_file: always_specify_types
-  Store _store;
+  late Store _store;
 
   @override
   S actions<S>() {
@@ -24,34 +24,62 @@ class StoreProviderImpl implements StoreProvider {
 
   @override
   S state<S>() {
-    // mock
+    if (S == AppState) {
+      return AppState((b) {
+        return b
+          ..appSettingsState.replace(
+            AppSettingsState(
+              (b2) {
+                return b2
+                  ..offline = false
+                  ..outOfService = false;
+              },
+            ),
+          ); // = AppSettingsState()
+      }) as S;
+    }
 
     return _store.state as S;
-    // if (S == RegistrationState) {
-    //   return RegistrationState() as S;
-    // }
-
-    // throw UnimplementedError();
   }
 
   @override
   AppActions get appActions {
-    return null;
+    return AppActions();
   }
 
   @override
   AppState get appState {
-    throw UnimplementedError();
+    return AppState();
   }
 
-  @override
-  T getStateValueByType<T>({String methodName}) {
+  T getStateValueByType<T>({required String methodName}) {
     throw UnimplementedError();
   }
 
   @override
   Stream<S> nextSubstate<S>(S Function(AppState) mapper) {
-    // return _store.nextState.map((event) => event as Built<RegistrationState, RegistrationStateBuilder>) as Stream<S>;
+    if (S == AppState) {
+      // stable internet connection
+      return Stream.value(AppState()) as Stream<S>;
+
+      // for tests unstable internet connection
+      // return Stream.periodic(const Duration(seconds: 1), (_) {
+      //   final AppState mockAppState = AppState((b) {
+      //     return b
+      //       ..appSettingsState.replace(
+      //         AppSettingsState(
+      //           (b2) {
+      //             return b2
+      //               ..offline = _kRandom.nextBool()
+      //               ..outOfService = _kRandom.nextBool();
+      //           },
+      //         ),
+      //       );
+      //   });
+
+      //   return mockAppState as S;
+      // });
+    }
 
     throw UnimplementedError();
   }
@@ -72,10 +100,3 @@ class StoreProviderImpl implements StoreProvider {
     return _store.stream.map((event) => event.next as S);
   }
 }
-
-// @override
-// Stream<SubState> nextSubstate<SubState>(StateMapper<AppState, AppStateBuilder, SubState> mapper) {
-//   final StateMapper<S, SB, dynamic> appStateMapper = _mappers[AppState];
-
-//   return _store.nextSubstate<SubState>((S state) => mapper(appStateMapper(state) as AppState));
-// }

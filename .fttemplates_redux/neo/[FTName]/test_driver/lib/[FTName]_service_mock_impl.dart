@@ -1,6 +1,3 @@
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
-import 'package:dioc/dioc.dart';
 import 'package:<FTName>/src/services/<FTName>_service.dart';
 import 'package:neo_network/neo_network.dart';
 
@@ -9,8 +6,7 @@ class <FTName | pascalcase>ServiceMockImpl extends <FTName | pascalcase>Service 
     this.neoApi,
   );
 
-  @Inject(mode: InjectMode.singleton)
-  final NeoApi neoApi;
+  final NeoApi? neoApi;
 
   // @override
   // Future<VerificationResponse> confirmPhoneNumber(String mobilePhone) async {
