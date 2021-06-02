@@ -1,5 +1,9 @@
 # Change Log
 
+### 5.0.1
+
+  - update readme
+
 ### 5.0.0
 
   - migration to nullsafety
