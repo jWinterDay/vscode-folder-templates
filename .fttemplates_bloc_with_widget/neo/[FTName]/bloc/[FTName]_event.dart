@@ -6,5 +6,5 @@ part '<FTName>_event.freezed.dart';
 abstract class <FTName | pascalcase>Event with _$<FTName | pascalcase>Event {
   const factory <FTName | pascalcase>Event.start() = _Start;
 
-  const factory <FTName | pascalcase>Event.changeLoading({bool value}) = _ChangeLoading;
+  const factory <FTName | pascalcase>Event.changeLoading({required bool value}) = _ChangeLoading;
 }

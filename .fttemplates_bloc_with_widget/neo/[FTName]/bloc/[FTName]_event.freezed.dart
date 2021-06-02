@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of '<FTName>_event.dart';
 
@@ -9,17 +9,18 @@ part of '<FTName>_event.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$<FTName | pascalcase>EventTearOff {
   const _$<FTName | pascalcase>EventTearOff();
 
-// ignore: unused_element
   _Start start() {
     return const _Start();
   }
 
-// ignore: unused_element
-  _ChangeLoading changeLoading({bool value}) {
+  _ChangeLoading changeLoading({required bool value}) {
     return _ChangeLoading(
       value: value,
     );
@@ -27,39 +28,41 @@ class _$<FTName | pascalcase>EventTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $<FTName | pascalcase>Event = _$<FTName | pascalcase>EventTearOff();
 
 /// @nodoc
 mixin _$<FTName | pascalcase>Event {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult start(),
-    @required TResult changeLoading(bool value),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function(bool value) changeLoading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult start(),
-    TResult changeLoading(bool value),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function(bool value)? changeLoading,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult start(_Start value),
-    @required TResult changeLoading(_ChangeLoading value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_ChangeLoading value) changeLoading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult start(_Start value),
-    TResult changeLoading(_ChangeLoading value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_ChangeLoading value)? changeLoading,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $<FTName | pascalcase>EventCopyWith<$Res> {
-  factory $<FTName | pascalcase>EventCopyWith(<FTName | pascalcase>Event value, $Res Function(<FTName | pascalcase>Event) then) =
-      _$<FTName | pascalcase>EventCopyWithImpl<$Res>;
+  factory $<FTName | pascalcase>EventCopyWith(<FTName | pascalcase>Event value, $Res Function(<FTName | pascalcase>Event) then) = _$<FTName | pascalcase>EventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -85,6 +88,7 @@ class __$StartCopyWithImpl<$Res> extends _$<FTName | pascalcase>EventCopyWithImp
 }
 
 /// @nodoc
+
 class _$_Start implements _Start {
   const _$_Start();
 
@@ -103,23 +107,20 @@ class _$_Start implements _Start {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult start(),
-    @required TResult changeLoading(bool value),
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function(bool value) changeLoading,
   }) {
-    assert(start != null);
-    assert(changeLoading != null);
     return start();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult start(),
-    TResult changeLoading(bool value),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function(bool value)? changeLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (start != null) {
       return start();
     }
@@ -128,23 +129,20 @@ class _$_Start implements _Start {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult start(_Start value),
-    @required TResult changeLoading(_ChangeLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_ChangeLoading value) changeLoading,
   }) {
-    assert(start != null);
-    assert(changeLoading != null);
     return start(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult start(_Start value),
-    TResult changeLoading(_ChangeLoading value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_ChangeLoading value)? changeLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (start != null) {
       return start(this);
     }
@@ -174,17 +172,21 @@ class __$ChangeLoadingCopyWithImpl<$Res> extends _$<FTName | pascalcase>EventCop
 
   @override
   $Res call({
-    Object value = freezed,
+    Object? value = freezed,
   }) {
     return _then(_ChangeLoading(
-      value: value == freezed ? _value.value : value as bool,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_ChangeLoading implements _ChangeLoading {
-  const _$_ChangeLoading({this.value});
+  const _$_ChangeLoading({required this.value});
 
   @override
   final bool value;
@@ -211,23 +213,20 @@ class _$_ChangeLoading implements _ChangeLoading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult start(),
-    @required TResult changeLoading(bool value),
+  TResult when<TResult extends Object?>({
+    required TResult Function() start,
+    required TResult Function(bool value) changeLoading,
   }) {
-    assert(start != null);
-    assert(changeLoading != null);
     return changeLoading(value);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult start(),
-    TResult changeLoading(bool value),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? start,
+    TResult Function(bool value)? changeLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (changeLoading != null) {
       return changeLoading(value);
     }
@@ -236,23 +235,20 @@ class _$_ChangeLoading implements _ChangeLoading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult start(_Start value),
-    @required TResult changeLoading(_ChangeLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Start value) start,
+    required TResult Function(_ChangeLoading value) changeLoading,
   }) {
-    assert(start != null);
-    assert(changeLoading != null);
     return changeLoading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult start(_Start value),
-    TResult changeLoading(_ChangeLoading value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Start value)? start,
+    TResult Function(_ChangeLoading value)? changeLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (changeLoading != null) {
       return changeLoading(this);
     }
@@ -261,9 +257,9 @@ class _$_ChangeLoading implements _ChangeLoading {
 }
 
 abstract class _ChangeLoading implements <FTName | pascalcase>Event {
-  const factory _ChangeLoading({bool value}) = _$_ChangeLoading;
+  const factory _ChangeLoading({required bool value}) = _$_ChangeLoading;
 
-  bool get value;
+  bool get value => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ChangeLoadingCopyWith<_ChangeLoading> get copyWith;
+  _$ChangeLoadingCopyWith<_ChangeLoading> get copyWith => throw _privateConstructorUsedError;
 }

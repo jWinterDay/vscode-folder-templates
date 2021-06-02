@@ -1,6 +1,4 @@
-// @dart=2.12
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
+// ignore_for_file: always_use_package_imports
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,10 +10,8 @@ import 'package:app_domain/domain/store_provider.dart';
 // import 'package:package_name/src/domain/state/<FTName>_state.dart';
 
 // flutter_bloc part
-// ignore: always_use_package_imports
-import '../events/<FTName>_event.dart';
-// ignore: always_use_package_imports
-import '../states/<FTName>_state.dart';
+import '<FTName>_event.dart';
+import '<FTName>_state.dart';
 
 class <FTName | pascalcase>Bloc extends Bloc<<FTName | pascalcase>Event, <FTName | pascalcase>State> {
   <FTName | pascalcase>Bloc({

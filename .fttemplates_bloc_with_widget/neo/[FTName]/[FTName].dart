@@ -1,13 +1,10 @@
-// @dart=2.12
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
 // ignore_for_file: always_use_package_imports
 import 'package:app_domain/domain/store_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/<FTName>_bloc.dart';
-import 'events/<FTName>_event.dart';
+import 'bloc/<FTName>_event.dart';
 import 'views/<FTName>_view.dart';
 
 class <FTName | pascalcase> extends StatelessWidget {

@@ -1,19 +1,17 @@
-// @dart = 2.12
-
-// ignore_for_file: import_of_legacy_library_into_null_safe
 // ignore_for_file: always_use_package_imports
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 // app domain
-import 'package:app_domain/domain/store_provider.dart';
+// import 'package:app_domain/domain/store_provider.dart'; // uncomment it for using redux store provider
 // import 'package:utilities/context_extention.dart'; // uncomment it for using context tools
 // import 'package:package_name/package_name.dart'; // uncomment it for using package specific
 
 import '../bloc/<FTName>_bloc.dart';
-import '../events/<FTName>_event.dart';
-import '../states/<FTName>_state.dart';
+import '../bloc/<FTName>_event.dart';
+import '../bloc/<FTName>_state.dart';
 
 class <FTName | pascalcase>View extends StatelessWidget {
   const <FTName | pascalcase>View({
@@ -47,13 +45,19 @@ class _Example extends StatelessWidget {
   Widget build(BuildContext context) {
     final <FTName | pascalcase>Bloc bloc = context.read<<FTName | pascalcase>Bloc>();
 
-    return GestureDetector(
-      onTap: () {
-        bloc.add(<FTName | pascalcase>Event.changeLoading(value: !loading));
-      },
-      child: Text(
-        'Example widget loading: $loading',
-        // style: context.typography.main17, // uncomment utilities/context_extention.dart
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            bloc.add(<FTName | pascalcase>Event.changeLoading(value: !loading));
+          },
+          child: Text(
+            'Example widget loading: $loading',
+            style: const TextStyle(
+              color: Colors.red, // TODO replace with context.colors. Example: context.colors.white,
+            ),
+          ),
+        ),
       ),
     );
   }
