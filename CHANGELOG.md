@@ -1,5 +1,9 @@
 # Change Log
 
+### 5.0.2
+
+  - update pubspec dependencies
+
 ### 5.0.1
 
   - update readme
